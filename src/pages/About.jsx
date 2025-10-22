@@ -1,7 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import cki from '../assets/images/cki.png';
-import chizu from '../assets/images/chizu.png';
-import tfb from '../assets/images/tfb.png';
 
 const About = () => {
   const carouselRef = useRef(null);
@@ -211,7 +208,7 @@ const About = () => {
               <div className="flex-shrink-0 w-[80%] md:w-[20%] lg:w-[20%] bg-ranin-broken rounded-lg shadow-xl border-solid">
                 <img
                   className="w-full mx-auto px-6 pt-6 rounded-t-[30px] block"
-                  src={tfb}
+                  src="/tfb.png"
                   alt="PT. Terbit Fajar Bersama"
                 />
                 <p className="font-jost text-xl text-slate-800 p-8 text-center">
@@ -261,7 +258,7 @@ const About = () => {
               <div className="flex-shrink-0 w-[80%] md:w-[20%] lg:w-[20%] bg-ranin-broken rounded-lg shadow-xl border-solid">
                 <img
                   className="w-full mx-auto px-6 pt-6 rounded-t-[30px] block"
-                  src={cki}
+                  src="/cki.png"
                   alt="PT. CKI"
                 />
                 <p className="font-jost text-xl text-slate-800 p-8 text-center">
@@ -271,7 +268,7 @@ const About = () => {
               <div className="flex-shrink-0 w-[80%] md:w-[20%] lg:w-[20%] bg-ranin-broken rounded-lg shadow-xl border-solid">
                 <img
                   className="w-full mx-auto px-6 pt-6 rounded-t-[30px] block"
-                  src={chizu}
+                  src="/chizu.png"
                   alt="Chizu Star Sejahtera"
                 />
                 <p className="font-jost text-xl text-slate-800 p-8 text-center">
