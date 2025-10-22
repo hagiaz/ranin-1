@@ -14,17 +14,13 @@ export default function Footer() {
             </a>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-2">
+          <div className="grid grid-cols-3 gap-8 sm:gap-6 sm:grid-cols-2 w-full lg:w-1/3 lg:text-right">
             <div>
-              <h2 className="mb-6 text-sm font-semibold uppercase text-ranin-white">Layanan</h2>
+              <h2 className="mb-6 text-sm font-semibold uppercase text-ranin-white">Alamat</h2>
               <ul className="text-ranin-white font-medium">
-                {['Legalitas', 'Pengadaan', 'Transportasi'].map((item) => (
-                  <li key={item} className="mb-4">
-                    <a href="/product-and-features" className="hover:underline">
-                      {item}
-                    </a>
-                  </li>
-                ))}
+                <li className="mb-4">
+                  <a>Jl. Bintara 17, Perum. Pondok Nurmaya 2 No. 10, Bintara Jaya, Bekasi Barat, Kota Bekasi</a>
+                </li>
               </ul>
             </div>
             <div>
@@ -34,7 +30,7 @@ export default function Footer() {
                   <a href="/about" className="hover:underline">Tentang Kami</a>
                 </li>
                 <li>
-                  <a href="/contact-us" className="hover:underline">Hubungi Kami</a>
+                  <a href="/contact" className="hover:underline">Hubungi Kami</a>
                 </li>
               </ul>
             </div>
