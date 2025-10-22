@@ -178,7 +178,7 @@ const About = () => {
         <section id="about-us-section-4">
           <div class="">
               <div class="font-jost container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 pt-5">
-                  <h2 class="benefit-heading my-12 text-3xl md:text-5xl font-bold text-slate-700 font-faculty text-center">Mengapa Kami?</h2>
+                  <h2 class="benefit-heading my-12 text-3xl md:text-5xl text-slate-700 font-faculty text-center">Mengapa Kami?</h2>
                   <div class="w-full">
                       <div class="flex flex-col w-full mb-5 sm:flex-row">
                           <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
@@ -229,7 +229,7 @@ const About = () => {
         {/* Carousel - Klien Kami */}
         <section className="pt-24 w-full">
           <div className="w-10/12 mx-auto text-center">
-            <h2 className="benefit-heading mb-10 text-3xl md:text-5xl font-bold leading-tight text-ranin-beige font-faculty">
+            <h2 className="benefit-heading mb-10 text-3xl md:text-5xl leading-tight text-ranin-beige font-faculty">
               Klien <span className="text-scheme-orange">Kami</span>
             </h2>
 

@@ -30,7 +30,7 @@ export default function Footer() {
                   <a href="/about" className="hover:underline">Tentang Kami</a>
                 </li>
                 <li>
-                  <a href="/contact" className="hover:underline">Hubungi Kami</a>
+                  <a href="/info#contact" className="hover:underline">Hubungi Kami</a>
                 </li>
               </ul>
             </div>

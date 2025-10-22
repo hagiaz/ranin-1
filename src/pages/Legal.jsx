@@ -20,7 +20,7 @@ const Legal = () => {
               <article className="p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-ranin-beige dark:border-gray-700">
                 <h2 className="mb-2 text-2xl font-faculty tracking-tight text-gray-900 dark:text-white hover:underline">
                   <a>
-                    NIB
+                    NPWP
                   </a>
                 </h2>
                 <div className="flex justify-between items-center">

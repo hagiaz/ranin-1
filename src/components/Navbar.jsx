@@ -12,7 +12,7 @@ export default function Navbar() {
     { label: 'Tentang Kami', link: '/about' },
     { label: 'Layanan Kami', link: '/services' },
     { label: 'Legalitas', link: '/legal' },
-    { label: 'Kontak', link: '/contact' },
+    { label: 'Informasi', link: '/info' },
   ];
 
   return (

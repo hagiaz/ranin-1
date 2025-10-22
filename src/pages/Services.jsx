@@ -9,7 +9,7 @@ const Services = () => {
         <section>
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div className="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
-              <h2 className="mb-4 text-3xl lg:text-4xl tracking-tight font-extrabold font-faculty text-gray-900 dark:text-ranin-beige">
+              <h2 className="mb-4 text-3xl lg:text-4xl tracking-tight font-faculty text-gray-900 dark:text-ranin-beige">
                 Layanan Kami
               </h2>
               <p className="text-black sm:text-xl dark:text-black">

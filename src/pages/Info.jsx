@@ -1,17 +1,91 @@
-// src/pages/Contact.jsx
-import React from "react";
+import { useState } from 'react';
 
-const Contact = () => {
+const Info = () => {
+  // State for expanded FAQ items (can expand multiple)
+  const [expanded, setExpanded] = useState([]);
+
+  const toggleExpand = (index) => {
+    setExpanded((prev) =>
+      prev.includes(index)
+        ? prev.filter((i) => i !== index) // collapse if open
+        : [...prev, index] // expand otherwise
+    );
+  };
+
+  const faqList = [
+    {
+      question: 'Apa layanan utama yang ditawarkan?',
+      answer:
+        'Kami menyediakan layanan pengurusan transportasi darat, pengadaan barang dan jasa, serta berbagai bantuan legalitas dokumen usaha, termasuk paket izin usaha, PB-UMKU, Sertifikat Laik Higiene Sanitasi (SLHS), serta berbagai dokumen lainnya sesuai kebutuhan klien.',
+    },
+    {
+      question: 'Siapa yang dapat menggunakan layanan ini?',
+      answer:
+        'Layanan kami terbuka untuk semua kalangan — mulai dari pelaku usaha mikro, kecil, dan menengah (UMKM), hingga perusahaan yang membutuhkan bantuan profesional.',
+    },
+    {
+      question: 'Apa keuntungan menggunakan jasa konsultan legalitas seperti kami?',
+      answer:
+        'Dengan pengalaman dan pemahaman mendalam terhadap prosedur administrasi, kami membantu Anda menghemat waktu, menghindari kesalahan dokumen, dan memastikan seluruh proses berjalan sesuai dengan peraturan yang berlaku.',
+    },
+    {
+      question: 'Berapa lama proses pengurusan dokumen biasanya berlangsung?',
+      answer:
+        'Waktu penyelesaian tergantung pada jenis dokumen dan kelengkapan persyaratan. Namun, kami selalu berkomitmen untuk menyelesaikan setiap pengurusan dengan cepat dan efisien, sambil menjaga akurasi dan legalitasnya.',
+    },
+    {
+      question: 'Apakah saya harus datang langsung ke kantor untuk mengurus dokumen?',
+      answer:
+        'Tidak selalu. Kami menyediakan layanan konsultasi dan pengurusan secara daring (online) untuk memudahkan Anda, terutama bagi klien yang berada di luar daerah. Namun, beberapa dokumen mungkin memerlukan tanda tangan atau verifikasi langsung sesuai ketentuan.',
+    },
+    {
+      question: 'Apakah layanan ini sudah mencakup biaya resmi dari instansi terkait?',
+      answer:
+        'Setiap paket layanan memiliki rincian biaya yang berbeda. Kami akan menjelaskan secara transparan mengenai biaya jasa dan biaya resmi (jika ada) sebelum proses dimulai, agar tidak ada biaya tersembunyi.',
+    },
+  ];
+
   return (
     <div className="min-h-[910px] w-full bg-white dark:bg-ranin-white py-12 font-jost">
-      <div className="max-w-screen-xl mx-auto p-5">
+      {/* FAQ Section */}
+      <div id="faq" className="w-10/12 mx-auto">
+        <h1 className="font-faculty text-3xl lg:text-4xl text-ranin-beige font-bold text-center mt-16 mb-10">
+          Pertanyaan <span className="text-black">Sering Diajukan (FAQ)</span>
+        </h1>
+
+        <div className="flex flex-col md:flex-row flex-wrap">
+          {faqList.map((faq, index) => (
+            <div
+              key={index}
+              className="expandable-div p-6 bg-white rounded-lg border border-gray-200 shadow-md dark:bg-ranin-beige dark:border-gray-700 p-6 mt-3 w-full md:w-[48%] mx-0 md:mx-1"
+            >
+              <h4 className="mb-5 font-faculty text-ranin-white">{faq.question}</h4>
+              <p
+                className="reveal cursor-pointer text-black hover:text-blue-400"
+                onClick={() => toggleExpand(index)}
+              >
+                {expanded.includes(index) ? 'Tutup Jawaban' : 'Buka Jawaban'}
+              </p>
+              <div
+                className={`answer mt-3 transition-all duration-300 ${
+                  expanded.includes(index) ? 'block' : 'hidden'
+                }`}
+              >
+                <p className="pb-6 text-ranin-white">{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="max-w-screen-xl mx-auto p-5" id="contact">
         <section>
           <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
             <div className="mx-auto max-w-screen-sm text-center lg:mb-16 mb-8">
               <h2 className="mb-4 text-3xl lg:text-4xl tracking-tight font-faculty text-ranin-beige dark:text-ranin-beige">
                 Let's connect!
               </h2>
-              <p className="font-jost text-gray-500 sm:text-xl dark:text-gray-400">
+              <p className="font-jost text-black sm:text-xl dark:text-black">
                 Anda bisa terhubung dan menemukan kami pada tautan berikut:
               </p>
             </div>
@@ -132,4 +206,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Info;
