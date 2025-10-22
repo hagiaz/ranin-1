@@ -7,22 +7,28 @@ const About = () => {
     const carousel = carouselRef.current;
     if (!carousel) return;
 
-    let scrollAmount = 0;
-    const scrollStep = carousel.offsetWidth / 3;
-    const scrollInterval = 1000;
+    const scrollStep = 1;
+    const scrollInterval = 20;
+    let direction = 1; // 1 for forward, -1 for backward
 
     const interval = setInterval(() => {
-      if (scrollAmount >= carousel.scrollWidth - carousel.offsetWidth) {
-        scrollAmount = 0;
-        carousel.scrollTo({ left: 0, behavior: "smooth" });
-      } else {
-        scrollAmount += scrollStep;
-        carousel.scrollTo({ left: scrollAmount, behavior: "smooth" });
+      const maxScroll = carousel.scrollWidth - carousel.offsetWidth;
+      
+      // Check if we've reached the end (going forward)
+      if (direction === 1 && carousel.scrollLeft >= maxScroll - 2) {
+        direction = -1; // Reverse direction
+      } 
+      // Check if we've reached the beginning (going backward)
+      else if (direction === -1 && carousel.scrollLeft <= 2) {
+        direction = 1; // Go forward again
       }
+      
+      // Scroll in the current direction
+      carousel.scrollLeft += scrollStep * direction;
     }, scrollInterval);
 
-    return () => clearInterval(interval); // cleanup on unmount
-    }, []);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <div className="min-h-[910px] w-full bg-ranin-broken dark:bg-ranin-white py-12 font-jost">
@@ -170,39 +176,66 @@ const About = () => {
 
         {/* Section 4 - Keunggulan Kami */}
         <section id="about-us-section-4">
-          <div className="px-4 mx-auto max-w-screen-xl lg:px-6">
-            <div className="relative bg-white dark:bg-transparent">
-              <div className="container mx-auto">
-                <div className="-mx-4 flex flex-col-reverse md:flex-row justify-center flex-wrap items-center">
-                  <div className="w-full lg:w-4/12 pt-12">
-                    <div className="hero-content">
-                      <h1 className="mt-8 mb-5 text-3xl font-faculty dark:text-ranin-beige sm:text-[38px] text-center">
-                        Keunggulan Kami
-                      </h1>
+          <div class="">
+              <div class="font-jost container relative flex flex-col justify-between h-full max-w-6xl px-10 mx-auto xl:px-0 pt-5">
+                  <h2 class="benefit-heading my-12 text-3xl md:text-5xl font-bold text-slate-700 font-faculty text-center">Mengapa Kami?</h2>
+                  <div class="w-full">
+                      <div class="flex flex-col w-full mb-5 sm:flex-row">
+                          <div class="w-full mb-10 sm:mb-0 sm:w-1/2">
+                              <div class="relative h-full ml-0 mr-0 sm:mr-10">
+                                  <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-blue-400 rounded-lg"></span>
+                                  <div class="relative h-full p-5 bg-white border-2 border-blue-400 rounded-lg">
+                                      <div class="flex items-center -mt-1">
+                                          <h3 class="my-1 text-lg font-bold font-sarabun text-gray-800">Terpercaya dan Profesional</h3>
+                                      </div>
+                                      <p class="mt-3 mb-1 text-xs font-medium text-blue-400 uppercase">------------</p>
+                                      <p class="mb-2 text-gray-600">Kepercayaan klien adalah prioritas kami. Dengan tim yang berpengalaman dan berintegritas, setiap proses dilakukan secara transparan dan sesuai ketentuan hukum yang berlaku. Kami berkomitmen menjaga kerahasiaan serta keaslian dokumen Anda.</p>
+                                  </div>
+                              </div>
+                          </div>
 
-                      <p className="mt-4 mb-8 text-xl text-base text-body-color dark:text-black text-center">
-                        Terpercaya dan Profesional. <br />
-                        Layanan Terpadu. <br />
-                        Efisien dan Tepat Waktu.
-                      </p>
-                    </div>
+                          <div class="w-full mb-10 sm:w-1/2">
+                              <div class="relative h-full ml-0 md:mr-10">
+                                  <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-green-500 rounded-lg"></span>
+                                  <div class="relative h-full p-5 bg-white border-2 border-green-500 rounded-lg">
+                                      <div class="flex items-center -mt-1">
+                                          <h3 class="my-1 text-lg font-bold font-sarabun text-gray-800">Layanan Terpadu</h3>
+                                      </div>
+                                      <p class="mt-3 mb-1 text-xs font-medium text-green-500 uppercase">------------</p>
+                                      <p class="mb-2 text-gray-600">Kami menyediakan solusi menyeluruh untuk berbagai kebutuhan legalitas usaha — mulai dari izin usaha, PB-UMKU, SLHS, hingga dokumen pendukung lainnya. Semua dapat diurus dalam satu tempat, dengan pendampingan yang mudah dan terarah.</p>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                          <div class="w-full sm:mb-0 sm:w-1/2">
+                              <div class="relative h-full ml-0 mr-0 sm:mr-10">
+                                  <span class="absolute top-0 left-0 w-full h-full mt-1 ml-1 bg-yellow-400 rounded-lg"></span>
+                                  <div class="relative h-full p-5 bg-white border-2 border-yellow-400 rounded-lg">
+                                      <div class="flex items-center -mt-1">
+                                          <h3 class="my-1 text-lg font-bold font-sarabun text-gray-800">Efisien dan Tepat Waktu</h3>
+                                      </div>
+                                      <p class="mt-3 mb-1 text-xs font-medium text-yellow-400 uppercase">------------</p>
+                                      <p class="mb-2 text-gray-600">Kami mengerti bahwa waktu anda sangat berharga. Maka, kami  akan selalu mengupayakan dan mengutamakan pekerjaan yang cepat, efisien tetapi tetap berkualitas.</p>
+                                  </div>
+                              </div>
+                          </div>
+                          
+                      </div>
                   </div>
-                </div>
               </div>
-            </div>
           </div>
         </section>
 
         {/* Carousel - Klien Kami */}
         <section className="pt-24 w-full">
           <div className="w-10/12 mx-auto text-center">
-            <h2 className="benefit-heading mb-10 text-3xl md:text-5xl font-bold leading-tight text-slate-700 font-faculty">
+            <h2 className="benefit-heading mb-10 text-3xl md:text-5xl font-bold leading-tight text-ranin-beige font-faculty">
               Klien <span className="text-scheme-orange">Kami</span>
             </h2>
 
             <div
               ref={carouselRef}
-              className="carousel flex gap-4 overflow-hidden scroll-smooth snap-x snap-mandatory"
+              className="carousel flex gap-4 overflow-hidden scroll-smooth snap-x snap-mandatory pb-10 px-5"
             >
               {/* Example carousel items */}
               <div className="flex-shrink-0 w-[80%] md:w-[20%] lg:w-[20%] bg-ranin-broken rounded-lg shadow-xl border-solid">
