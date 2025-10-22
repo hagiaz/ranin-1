@@ -9,7 +9,7 @@ const About = () => {
 
     let scrollAmount = 0;
     const scrollStep = carousel.offsetWidth / 3;
-    const scrollInterval = 1500;
+    const scrollInterval = 1000;
 
     const interval = setInterval(() => {
       if (scrollAmount >= carousel.scrollWidth - carousel.offsetWidth) {
@@ -41,14 +41,14 @@ const About = () => {
                       <div className="w-full px-3 sm:px-4 xl:w-1/2">
                         <div className="py-3 sm:py-4">
                           <img
-                            src="https://plus.unsplash.com/premium_photo-1661476126478-a43171605fe5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3"
+                            src="https://plus.unsplash.com/premium_photo-1705091310871-eac4ca9a06b7?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=435"
                             alt="About us 1"
                             className="w-full rounded-2xl"
                           />
                         </div>
                         <div className="py-3 sm:py-4">
                           <img
-                            src="https://plus.unsplash.com/premium_photo-1661476126478-a43171605fe5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3"
+                            src="https://plus.unsplash.com/premium_photo-1661757793473-d7238d217415?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387"
                             alt="About us 2"
                             className="w-full rounded-2xl"
                           />
@@ -58,7 +58,7 @@ const About = () => {
                       <div className="w-full px-3 sm:px-4 xl:w-1/2">
                         <div className="relative z-10 my-4">
                           <img
-                            src="https://plus.unsplash.com/premium_photo-1661476126478-a43171605fe5?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3"
+                            src="https://plus.unsplash.com/premium_photo-1668383207188-f5474588d674?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=387"
                             alt="About us 3"
                             className="w-full rounded-2xl"
                           />
@@ -99,7 +99,7 @@ const About = () => {
             <div className="relative bg-white dark:bg-transparent">
               <div className="container mx-auto">
                 <div className="-mx-4 flex flex-col-reverse md:flex-row justify-center flex-wrap items-center">
-                  <div className="w-full lg:w-4/12 pt-12 lg:pt-0">
+                  <div className="w-full lg:w-4/12 pt-24 lg:pt-0">
                     <div className="hero-content">
                       <h1 className="mb-5 text-3xl font-faculty !leading-[1.208] dark:text-ranin-beige sm:text-[38px]">
                         Visi Kami :
@@ -155,7 +155,7 @@ const About = () => {
                     <div className="lg:ml-auto lg:text-right">
                       <div className="relative z-10 inline-block">
                         <img
-                          src="https://images.unsplash.com/photo-1522152302542-71a8e5172aa1?q=80&w=2016&auto=format&fit=crop&ixlib=rb-4.0.3"
+                          src="https://images.unsplash.com/photo-1695388474402-ed805a890d8d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=870"
                           alt="Misi Kami"
                           className="max-w-full lg:max-w-md lg:ml-auto rounded-tl-[100px]"
                         />
@@ -174,9 +174,9 @@ const About = () => {
             <div className="relative bg-white dark:bg-transparent">
               <div className="container mx-auto">
                 <div className="-mx-4 flex flex-col-reverse md:flex-row justify-center flex-wrap items-center">
-                  <div className="w-full lg:w-4/12 pt-12 lg:pt-0">
+                  <div className="w-full lg:w-4/12 pt-12">
                     <div className="hero-content">
-                      <h1 className="mt-16 mb-5 text-3xl font-faculty dark:text-ranin-beige sm:text-[38px] text-center">
+                      <h1 className="mt-8 mb-5 text-3xl font-faculty dark:text-ranin-beige sm:text-[38px] text-center">
                         Keunggulan Kami
                       </h1>
 
@@ -194,7 +194,7 @@ const About = () => {
         </section>
 
         {/* Carousel - Klien Kami */}
-        <section className="pt-32 w-full">
+        <section className="pt-24 w-full">
           <div className="w-10/12 mx-auto text-center">
             <h2 className="benefit-heading mb-10 text-3xl md:text-5xl font-bold leading-tight text-slate-700 font-faculty">
               Klien <span className="text-scheme-orange">Kami</span>
