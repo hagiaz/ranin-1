@@ -19,8 +19,11 @@ export default function Navbar() {
         {/* Logo */}
         <a href="/" className="flex items-center">
           <img src={logo} className="h-8 me-3" alt="Logo" />
-          <span className="text-white self-center text-xl font-faculty font-semibold whitespace-nowrap">
-            RANIN KONSULTAN
+          <span className="text-white self-center text-xl font-faculty font-semibold whitespace-nowrap hidden md:block">
+            RANIN MANDIRI INDONESIA
+          </span>
+          <span className="text-white self-center text-xl font-faculty font-semibold whitespace-nowrap block md:hidden">
+            RANIN MANDIRI
           </span>
         </a>
 

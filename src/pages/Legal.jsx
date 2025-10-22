@@ -11,7 +11,7 @@ const Legal = () => {
               <h2 className="mb-4 text-3xl lg:text-4xl tracking-tight font-faculty text-ranin-beige dark:text-ranin-beige">
                 Legalitas
               </h2>
-              <p className="font-jost text-gray-500 sm:text-xl dark:text-gray-400">
+              <p className="font-jost text-black sm:text-xl dark:text-black">
                 Berikut beberapa data legalitas perusahaan. 
               </p>
             </div>

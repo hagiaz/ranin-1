@@ -13,7 +13,7 @@ const Services = () => {
                 Layanan Kami
               </h2>
               <p className="text-black sm:text-xl dark:text-black">
-                Berikut adalah beberapa jasa layanan yang kami tawarkan. Klik "Selengkapnya" untuk mengetahui lebih lanjut.
+                Berikut adalah beberapa jasa layanan yang kami tawarkan.
               </p>
             </div>
 
