@@ -20,7 +20,7 @@ export default function Hero() {
               Dengan dukungan tim profesional yang berintegritas dan berpengalaman, kami senantiasa memberikan layanan bernilai tambah. Tujuan kami adalah membangun kepercayaan jangka panjang dan menjadi partner strategis bagi setiap pertumbuhan bisnis.
             </h3>
             <h3 className="font-jost font-medium text-sm sm:text-lg pt-8">
-              Tujuan kami sederhana: memberikan solusi yang tepat dan efisien untuk mempermudah proses legalitas bisnis Anda. Rekam jejak kami menjadi bukti bahwa kami selalu berusaha memberikan hasil terbaik dan melampaui harapan klien.
+              Tujuan kami sederhana: memberikan solusi yang tepat dan efisien untuk mempermudah bisnis Anda. Rekam jejak kami menjadi bukti bahwa kami selalu berusaha memberikan hasil terbaik dan melampaui harapan klien.
             </h3>
             <div className="pt-8">
               <a
