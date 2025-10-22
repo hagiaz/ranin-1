@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="hero">
       <div className="flex flex-col lg:flex-row text-gray-800 dark:text-white lg:mt-12">
-        <div className="flex-grow lg:h-screen text-center font-jost grid place-items-center mx-auto sm:w-full lg:w-1/3 pt-24 lg:pt-0 pb-16 lg:pb-0 bg-gradient-to-b lg:bg-gradient-to-r from-ranin-white to-ranin-beige dark:bg-slate-800">
+        <div className="flex-grow lg:h-screen text-center font-jost grid place-items-center mx-auto w-full pt-24 lg:pt-0 pb-16 lg:pb-0 bg-gradient-to-b lg:bg-gradient-to-r from-ranin-white to-ranin-beige dark:bg-slate-800">
           <img className="pt-8 w-1/2 sm:w-1/4 lg:w-3/4 mx-auto drop-shadow-xl" src={logo} alt="Dashboard" />
         </div>
 
@@ -24,8 +24,8 @@ export default function Hero() {
             </h3>
             <div className="pt-8">
               <a
-                href="/product-and-features"
-                className="mt-8 px-5 py-3 rounded-lg font-bold bg-sigrax-yellow hover:bg-sigrax-yellow"
+                href="/contact"
+                className="mt-8 px-5 py-3 rounded-lg font-faculty text-ranin-white bg-sigrax-red hover:bg-sigrax-yellow shadow-xl"
               >
                 Hubungi Kami
               </a>
